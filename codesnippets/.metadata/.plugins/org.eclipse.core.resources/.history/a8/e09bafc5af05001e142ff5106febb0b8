@@ -1,0 +1,24 @@
+
+public class MYSQLDBConnection {
+	
+	public static void main(String[] args) {
+		
+		
+		try {
+			//step1: Load and Register the Driver 
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			// Get the connection by using username, password and url 
+			
+			
+		}
+		catch(Exception e) {
+			 System.out.println(e);
+		}
+		
+		
+	}
+
+}
+
+

@@ -1,0 +1,69 @@
+JDBC:  Java Database Connectivity
+
+JDBC helps Java programming language to connect to Database and perform the database 
+operations. 
+
+
+Task: Install MYSQL Database 
+
+
+Database (MySQL):
+
+A database is a server that is used to store the data in a structured format. 
+
+A database is a collection of tables. 
+
+A table is a collection of columns and rows -> records
+
+
+Queries: 
+
+
+create database amazon;
+
+use amazon;
+
+create table users(username varchar(100), password varchar(100), email varchar(200));
+
+insert into users values('digital','digital','digital@gmail.com');
+
+select * from users;
+
+
+Steps to connect to Database using JDBC: 
+
+Step 1:  Load / Register the driver 
+
+Step 2:    Get the connection to database by providing username, password, url 
+
+  username: root 
+
+  password: ksvkskv 
+
+  url: jdbc:mysql:localhost:3306/amazon
+
+
+Step 3:  Prepare the SQL Query 
+
+
+Step 4:  Send the query to the database through the connection
+
+
+Step 5:  Grab the result provided by Database 
+
+
+Step 6: close the connection 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

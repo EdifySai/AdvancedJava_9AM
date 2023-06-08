@@ -1,0 +1,2 @@
+driverClass = com.mysql.cj.jdbc.Driver 
+

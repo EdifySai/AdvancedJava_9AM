@@ -1,0 +1,33 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MYSQLDBConnection {
+	
+	public static void main(String[] args) {
+		
+		
+		try {
+			//step1: Load and Register the Driver 
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			// Get the connection by using username, password and url
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/amazon", "root1", "i1pl2021@dubai");
+		
+		 
+		 if(connection != null) {
+			 System.out.println("Connected to the database");
+		 }
+		 else {
+			 System.out.println("Problem in database connection");
+		 }
+			
+		}
+		catch(Exception e) {
+			 System.out.println(e);
+		}
+		
+		
+	}
+
+}
+
+

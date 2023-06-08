@@ -1,0 +1,6 @@
+driverClass=com.mysql.cj.jdbc.Driver
+url=jdbc:mysql://localhost:3306/amazon 
+username=root
+password=ipl2021@dubai 
+
+
