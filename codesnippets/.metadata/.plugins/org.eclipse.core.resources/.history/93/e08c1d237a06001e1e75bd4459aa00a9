@@ -1,0 +1,32 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class EmployeeManagementSystem {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ems","root","ipl2021@dubai");
+			Statement statement = connection.createStatement();
+			
+			// create a table 
+			
+			   statement.execute("create table employees(name varchar(100), project varchar(200), location varchar(200)");
+			   
+		}
+		catch(Exception e) {
+			
+		}	
+	}
+}
+
+
+/*
+
+Connection: Interface
+
+   interface Connection {
+   
+   }
+
+*/

@@ -1,0 +1,61 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class EmployeeManagementSystem {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeemgt","root","ipl2021@dubai");
+			Statement statement = connection.createStatement();
+			
+			Scanner sc = new Scanner(System.in);
+			
+			// create a table 
+			
+//			   statement.execute("create table employees(name varchar(100), project varchar(200), location varchar(200))");
+//			   System.out.println("created");
+			
+			
+			// insert data into a table
+			
+			
+//			 System.out.println("Enter name");
+//			 String name = sc.next();
+//			 
+//			 System.out.println("Enter project");
+//			 String project = sc.next();
+//			 
+//			 System.out.println("Enter location");
+//			 String location = sc.next();
+//			 
+//		    String query= "insert into employees values('"+name+"','"+project+"','"+location+"')";	
+//			System.out.println("query "+ query);
+//			
+//			  statement.execute(query);
+//			  
+//			  System.out.println("executed");
+			
+			
+			// list of employees 
+			
+			  statement.executeQuery("select * from employees");
+		}
+		catch(Exception e) {
+			
+			System.out.println(e);
+		}	
+	}
+}
+
+
+/*
+
+Connection: Interface
+
+   interface Connection {
+   
+   }
+
+*/

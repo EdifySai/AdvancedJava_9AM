@@ -1,0 +1,16 @@
+
+public class EmployeeManagementSystem {
+	
+	public static void main(String[] args) {
+		
+		try {
+			
+		}
+		catch(Exception e) {
+			
+		}
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+	}
+
+}
