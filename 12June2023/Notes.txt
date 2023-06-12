@@ -1,0 +1,101 @@
+Statement:
+
+  Statement statement =  connection.createStatement();
+
+
+  // Statement ->  builds the bridge to send SQL Queries from java application to the database. 
+
+  String query ="insert in employees("10","ravi")"
+
+  statement.execute(query);
+
+  Java  ->  Network Call ->   Database 
+
+  Home            DigitalLync
+
+
+PreparedStatement:
+
+PreparedStatement interface is a sub interface of Statement interface where all the SQL queries are 
+precompiled before they are sent to the database. 
+
+PreparedStatement saves network calls. 
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class PreparedStatementDemo {
+	public static void main(String[] args) {
+		try {		
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/amazon", "root", "ipl2021@dubai");
+			 
+			String query="insert into users values(?,?,?)";
+			int i =1;
+			while(i <=10) {
+				PreparedStatement preparedStatement = connection.prepareStatement(query);
+				preparedStatement.setString(1, "kiran"+i);
+				preparedStatement.setString(2, "kiran123"+i);
+				preparedStatement.setString(3, "kiran@gmail.com"+i);
+			    preparedStatement.execute();
+			    System.out.println("completed");
+			    i++;
+			}	
+		}
+		catch(Exception e) {
+			 System.out.println(e);
+		}
+	}
+}
+
+Meta Data:
+
+
+For Database -> DatabaseMetaData 
+
+For Table Results (Select) ->  ResultSetMetaData 
+
+
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+
+public class MetaDataDemo {
+	
+	public static void main(String[] args) {
+		
+		try {
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/amazon", "root", "ipl2021@dubai");
+			 
+			DatabaseMetaData dbmd= connection.getMetaData();
+			System.out.println(dbmd.getDatabaseProductName());
+			System.out.println(dbmd.getDriverName());
+			System.out.println(dbmd.getDriverVersion());
+		  System.out.println(dbmd.getMaxConnections());
+			
+		     Statement statement = connection.createStatement();
+		     
+		    ResultSet rs = statement.executeQuery("select * from users");
+		   ResultSetMetaData rsmd = rs.getMetaData();
+		    System.out.println(rsmd.getColumnCount());
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+
+}
+
+
+
+
+

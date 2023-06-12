@@ -9,7 +9,7 @@ public class MYSQLDBConnectionWithProps {
 	public static void main(String[] args)  {
 		try {
 			
-			FileReader fr= new FileReader("/Users/saikumar/Desktop/ADVJAVA-9AM/codesnippets/JDBC/src/config.properties");
+			FileReader fr= new FileReader("/Users/saikumar/Desktop/ADVJAVA-9AM/AdvancedJava_9AM/codesnippets/JDBC/config.properties");
 			 
 			 Properties properties = new Properties();
 			 
@@ -28,6 +28,8 @@ public class MYSQLDBConnectionWithProps {
 			Class.forName(driverClass);
 			// Get the connection by using username, password and url
 		Connection connection = DriverManager.getConnection(url, username, password);
+		
+		 System.out.println("connection"+ connection);
 		 if(connection != null) {
 			 System.out.println("Connected to the database");
 			 

@@ -1,0 +1,37 @@
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class MetaDataDemo {
+	
+	public static void main(String[] args) {
+		
+		try {
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/amazon", "root", "ipl2021@dubai");
+			 
+//			DatabaseMetaData dbmd= connection.getMetaData();
+//			
+//			System.out.println(dbmd.getDatabaseProductName());
+//			System.out.println(dbmd.getDriverName());
+//			System.out.println(dbmd.getDriverVersion());
+//		  System.out.println(dbmd.getMaxConnections());
+			
+		     Statement statement = connection.createStatement();
+		     
+		    ResultSet rs = statement.executeQuery("select * from users");
+		    
+		    rs.getMetaData();
+		   
+			
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+
+}
