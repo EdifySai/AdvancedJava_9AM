@@ -1,0 +1,108 @@
+MongoDB :
+
+
+MongoDB is a NOSQL Database where the data gets stored in json 
+format.
+
+
+Database -> Collections -> documents 
+
+
+Each document is considered as a JSON object. 
+
+syntax: {
+
+    key : value 
+}
+ex: 
+ {
+     username: 'kiran',
+     password: 'rajesh', 
+     name:"Kiran"
+ }
+
+
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+public class MongoDBDemo {
+
+	public static void main(String[] args) {
+		MongoClient mongoClient = new MongoClient("localhost");
+		System.out.println(mongoClient);
+		
+//		mongoClient.getDatabaseNames();
+		
+		MongoDatabase mongoDB =  mongoClient.getDatabase("jdbcdb");
+		
+		System.out.println(mongoDB);
+		
+		//mongoDB.createCollection("products");
+		
+		MongoCollection collection = mongoDB.getCollection("users");
+		collection.drop();
+		
+		System.out.println("completed");	
+	}
+
+
+Servlets: 
+
+Servlet is a java technology that enhances the capability of a web server 
+to provide features / funtionalities to the end users.
+
+Servlet is a class that extends the capability of a server by providing 
+different resources based on user requirement. 
+
+3 Ways to Create a Servlet.
+
+1. using Servlet Interface 
+
+    class MyServlet implements Servlet{
+
+        // implementation for Servlet interface methods
+
+	}
+
+2. using GenericServlet class
+
+internal code:
+
+ class GenericServlet implements Servlet{
+
+        // implemented all the methods
+
+	}
+
+
+class MyServlet extends GenericServlet{
+
+	// overide the require methods
+}
+
+
+3. using HttpServlet class( Recommended)
+
+
+
+Workflow: 
+
+
+https://www.facebook.com/messages 
+
+
+messages -> url pattern 
+
+
+web.xml:
+
+Servlet Mapping (url pattern -> MyServlet)
+
+MyServlet.java:
+
+
+service()
+
+
