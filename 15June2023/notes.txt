@@ -1,0 +1,14 @@
+Problem Statement: Create a register page (html) using servlets and 
+store the entered data into the database. 
+
+Solution: Refer to Servlet-JDBC project in code snippets. 
+
+Task: 
+
+Create a login page, let the user enter the details, based on the details 
+provided, validate the details with database registered users. If the 
+details found to be valid, then send 'login success' else based on 
+the conditions, provide an appropriate message. 
+
+
+

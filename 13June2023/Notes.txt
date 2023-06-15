@@ -86,7 +86,6 @@ class MyServlet extends GenericServlet{
 3. using HttpServlet class( Recommended)
 
 
-
 Workflow: 
 
 
