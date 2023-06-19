@@ -8,6 +8,8 @@
 <fullyQualifiedTypeName name="javax.servlet.GenericServlet"/>
 <fullyQualifiedTypeName name="javax.net.ssl.HttpsURLConnection"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 </qualifiedTypeNameHistroy>

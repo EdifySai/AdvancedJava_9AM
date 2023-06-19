@@ -25,6 +25,7 @@ public class RegisterServlet extends HttpServlet {
 			 System.out.println(e);
 		 }
 	}
+	 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		  PrintWriter out =  resp.getWriter();
@@ -71,8 +72,7 @@ public class RegisterServlet extends HttpServlet {
 				 out.print("Something went wrong! please try again after sometime");
 				 
 			 }
-			
-			 
+
 		 }
 	}
 	
