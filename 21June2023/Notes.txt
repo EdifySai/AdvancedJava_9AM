@@ -1,0 +1,14 @@
+Servlets: 
+
+The main drawback of Servlets is, the html code is written inside 
+java code.
+
+Java Server Pages:
+
+The fundamental technology JSP uses is Servlets, however JSPs provide 
+an easy way of writing UI content along with Java code. 
+
+
+In JSP, The servlet code / java code is written along with html code, hence 
+it becomes more UI Friendly. 
+
