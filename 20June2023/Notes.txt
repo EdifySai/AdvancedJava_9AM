@@ -1,0 +1,73 @@
+Session Management:
+
+HTTP Protocol is designed in such a way that it cannot remember the information 
+of a request.
+
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class FirstServlet
+ */
+@WebServlet("/FirstServlet")
+public class FirstServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		   HttpSession session =  request.getSession();
+		   String token ="hello";
+		   session.setAttribute("token", "hello");
+		   PrintWriter out = response.getWriter();
+		   out.print("<html><head></head> <body><a href='./SecondServlet'>Next Page</a></body></html>");
+		   
+		
+	}
+
+}
+
+
+
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class SecondServlet
+ */
+@WebServlet("/SecondServlet")
+public class SecondServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+ 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session =   request.getSession(false);
+		String token = (String) session.getAttribute("token");
+		System.out.println("token" + token);
+		
+	}
+
+}
+
+Problem Statement: 
+
+Create a register page with following details, 
+1. username, password, emailid and store the details in to the db from the UI
+2. once the userdetails are stored in the DB, then store the username in a 
+session and display the username in the next page (dashboard).
+
+
+
