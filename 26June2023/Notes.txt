@@ -1,0 +1,35 @@
+Caching: Caching is a mechanism to store the data that can be reused multiple times without hitting the 
+data source for every request. 
+
+Levels of Caching:
+
+First Level Cache -  Session Level (Same user) - 1 user
+
+ 1 request ->   accessing a list of users (select * from users); -> Database -> users 
+
+    result -> store it somewhere- cache
+
+ 2 request ->  accessing a list of users (select * from users); -> Database -> users 
+
+ 3 request ->  accessing a list of users (select * from users); -> Database -> users 
+
+
+ Second Level Cache - Session Factory Level (different users) - multiple users. 
+
+
+ user 1 ->  1req -> list of users -> DB  -> users and stores them in cache. 
+
+
+ user 1 ->  2req -> list of users -> cache  -> users
+
+
+ user2 -> 1 req ->   list of users ->  cache -> users 
+ 
+
+
+
+
+
+
+
+
