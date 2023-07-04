@@ -1,0 +1,52 @@
+Spring Framework:
+
+Spring Core: 
+
+
+Dependency Injection:
+
+Tightly Coupling:  Inheritance follows is-a relationship
+
+class A{
+
+}
+class B1{
+
+}
+class C{
+
+}
+
+class B extends A,B1,C{ // Not Possible
+
+}
+
+Loosely Coupling:  Composition
+
+class A{
+
+}
+class B{
+
+}
+class C{
+
+}
+
+class D{
+
+      A aa;
+      B bb;
+      C cc;
+
+}
+
+Composition follows HAS-A relationship. 
+
+
+
+
+
+
+
+

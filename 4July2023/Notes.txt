@@ -1,0 +1,13 @@
+
+IOC: Inversion of Control Container is used to provide the Dependency 
+Injection mechanism where an object / primitive values are passed as external 
+values to the application / dependent object. 
+
+
+There are 2 containers provided for Dependency Injection. 
+
+1. BeanFactory 
+2. ApplicationContext 
+
+
+
