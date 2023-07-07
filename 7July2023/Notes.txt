@@ -1,0 +1,21 @@
+
+
+
+Controller
+
+Model 
+
+Service 
+
+DAO(Data Access Object)
+
+Sterotype Annotations:
+
+request -> Controller -> Service -> DAO -> Database 
+
+
+response -> Database -> DAO -> Service -> Controller
+
+
+
+
