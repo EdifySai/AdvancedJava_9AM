@@ -1,0 +1,9 @@
+Spring MVC: 
+
+MVC: 
+
+Model : Java Class->  Database
+
+View  :  UI - jsp
+
+Controller:  Servlet / Java Class -  Mediator for request / response
