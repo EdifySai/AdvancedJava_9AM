@@ -10,5 +10,4 @@ public interface EmployeeService {
 	   public List<Employee> list();
 	   public void update(Employee employee); 
 	   public void delete(int id);
-
 }

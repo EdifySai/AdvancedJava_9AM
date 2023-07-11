@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "employees")
 public class Employee {
-
 	@Id@GeneratedValue
 	private int id;
 	@Column
