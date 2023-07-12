@@ -16,16 +16,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 	EmployeeDAO employeeDAO;
 	
 	@Transactional
-	public void add(Employee employee) {
+	public boolean add(Employee employee) {
 		// TODO Auto-generated method stub
 		System.out.println("Inisde EmployeeServiceImpl");
 		System.out.println(employee.getLocation());
-		employeeDAO.add(employee);
+		return employeeDAO.add(employee);
 	
 	}
 	public List<Employee> list() {
 		// TODO Auto-generated method stub
-		return null;
+		 return employeeDAO.list();
+	
 	}
 
 	public void update(Employee employee) {

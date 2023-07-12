@@ -43,6 +43,14 @@
       <artifactId>hibernate-core</artifactId>
       <version>5.4.1.Final</version>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+    
         
         <dependency>
     <groupId>javax.persistence</groupId>

@@ -2,6 +2,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +20,17 @@
       <form:input type="text" path="reportingManager" placeholder="enter reportingManager"/><br><br>
   <form:button>Add Employee</form:button>
   </form:form>
- <h1 style="color:red"> ${message}</h1> 
+   <a href="./showEmployees">Show Employees</a>
+ <h1> ${message}</h1> 
+ 
+ <table>
+    <c:forEach items="${employees}" var="employee">
+        <tr>
+            <td>Employee ID: <c:out value="${employee.id}"/></td>
+            <td>Employee Pass: <c:out value="${employee.name}"/></td>  
+        </tr>
+    </c:forEach>
+</table>
   </center>
 </body>
 </html>
