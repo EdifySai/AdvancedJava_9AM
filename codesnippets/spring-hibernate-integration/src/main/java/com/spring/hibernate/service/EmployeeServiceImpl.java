@@ -35,7 +35,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generad method stub
+		
+		employeeDAO.delete(id);
 		
 	}
 }

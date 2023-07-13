@@ -48,6 +48,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		Session session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
+	  Employee employee = session.get(Employee.class, id);
+	  session.remove(employee);
+	  tx.commit();
 	}
 }
