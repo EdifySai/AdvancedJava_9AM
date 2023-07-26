@@ -24,7 +24,7 @@ public class MailSender {
 		    Content content = new Content("text/html", "<html><body><h1>This is a test email</h1> <a href='https://www.digital-lync.com'>Click here</a></body></html>");
 		    Mail mail = new Mail(from, subject, to, content);
 		
-		    SendGrid sg = new SendGrid("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");
+		    SendGrid sg = new SendGrid("");
 		    Request request = new Request();
 		    try {
 		      request.setMethod(Method.POST);
