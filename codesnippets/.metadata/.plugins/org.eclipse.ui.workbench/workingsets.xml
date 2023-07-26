@@ -4,7 +4,11 @@
 <item elementID="=JDBC/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686195547941_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1690258175817_5" label="ecommerce" name="ecommerce">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ecommerce" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686195556337_2" label="Window Working Set" name="Aggregate for window 1686195556337"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686628575354_3" label="Window Working Set" name="Aggregate for window 1686628575354"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1687750903370_4" label="Window Working Set" name="Aggregate for window 1687750903370"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1690343536006_6" label="Window Working Set" name="Aggregate for window 1690343536006"/>
 </workingSetManager>

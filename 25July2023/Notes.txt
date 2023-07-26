@@ -1,0 +1,16 @@
+Scope:
+
+1. User Management - Register, Login, List of Users, Forgot Password, Change Password
+
+  Third Party Integration -  Email Service - SendGrid -Completed
+
+2. Product Management - Add product, update, remove, list all products 
+
+3. Seller Management - add seller, update, remove, list all sellers 
+
+4. Cart Implementation - add products to the cart, remove them. 
+
+5. Payment Integration - Razor Pay. 
+
+6. Swagger Integration.
+
