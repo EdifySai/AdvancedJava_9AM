@@ -1,14 +1,14 @@
-package ecommerce.ecommerce;
+package com.ecommerce;
 
 //import java.io.IOException;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
 //import com.ecommerce.utils.MailSender;
-
-@EntityScan(basePackages = {"com.ecommerce.model"})
+@EntityScan(basePackages = {"com.ecommerce"})
 @SpringBootApplication
 public class EcommerceApplication {
 	public static void main(String[] args) {
