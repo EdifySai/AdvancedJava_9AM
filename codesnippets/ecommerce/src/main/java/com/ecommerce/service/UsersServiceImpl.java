@@ -1,5 +1,7 @@
 package com.ecommerce.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,13 @@ public class UsersServiceImpl implements UsersService {
 	public Response registerUser(User user) {
 		 return usersDAO.registerUser(user);
 	}
-
-	
+	@Override
+	public Response loginUser(User user) {
+		 return usersDAO.loginUser(user);
+		
+	}
+	@Override
+	public List<User> getUsers() {
+		return usersDAO.getUsers();
+	}
 }

@@ -21,13 +21,11 @@ public class UserController {
 	@Autowired
 	UsersService usersService;
 	
-	
 	@RequestMapping("/health")
 	public String healthCheck() {
 		return "App is working fine";
 		
 	}
-	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostMapping("/register")
 	public ResponseEntity register(@RequestBody User user) {
@@ -46,4 +44,18 @@ public class UserController {
 		 }
 		return new ResponseEntity(response,response.getOperation()? HttpStatus.CREATED : HttpStatus.BAD_REQUEST);	
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@PostMapping("/login")
+	public ResponseEntity login(@RequestBody User user) {
+		Response response = usersService.loginUser(user);
+		return new ResponseEntity(response,response.getOperation()? HttpStatus.OK : HttpStatus.BAD_REQUEST);	
+
+	}
+	
+	// API End point
+	
+	
+	
+	
 }
