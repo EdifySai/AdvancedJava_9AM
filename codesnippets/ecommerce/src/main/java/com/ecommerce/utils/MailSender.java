@@ -23,7 +23,7 @@ public class MailSender {
 		    Content content = new Content("text/html", "<html><body><h1>Thanks for registering with us. We hope you will have a wonderful experience You can start from here</h1> <a href='https://www.flipkart.com'>Login</a></body></html>");
 		    Mail mail = new Mail(from, subject, to, content);
 		
-		    SendGrid sg = new SendGrid("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");
+		    SendGrid sg = new SendGrid("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");
 		    Request request = new Request();
 		    try {
 		      request.setMethod(Method.POST);
@@ -37,5 +37,30 @@ public class MailSender {
 		      throw ex;
 		    }	   
 	}
+	
+	public int forgotPassword(String toEmail) throws IOException {
+		System.out.println("Inside mail sender");
+		// the sender email should be the same as we used to Create a Single Sender Verification
+		    Email from = new Email("har23456ika2407@gmail.com");
+		    String subject = "Reset Password Request!";
+		    Email to = new Email(toEmail);
+		    Content content = new Content("text/html", "<html><body><h1>Based on your request, please click on this link</h1> <a href='https://www.flipkart.com'>create password</a><h1>to create your new password</h1></body></html>");
+		    Mail mail = new Mail(from, subject, to, content);
+		
+		    SendGrid sg = new SendGrid("");
+		    Request request = new Request();
+		    try {
+		      request.setMethod(Method.POST);
+		      request.setEndpoint("mail/send");
+		      request.setBody(mail.build());
+		      Response response = sg.api(request);
+		      System.out.println("response" + response.getStatusCode());
+		      System.out.println("response.getBody()"+ response.getBody());
+		      return response.getStatusCode();	     
+		    } catch (IOException ex) {
+		      throw ex;
+		    }	   
+	}
+	
 	
 }

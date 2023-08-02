@@ -28,4 +28,9 @@ public class UsersServiceImpl implements UsersService {
 	public List<User> getUsers() {
 		return usersDAO.getUsers();
 	}
+	@Override
+	public Response forgotPassword(User user) {
+		// TODO Auto-generated method stub
+		return usersDAO.forgotPassword(user);
+	}
 }

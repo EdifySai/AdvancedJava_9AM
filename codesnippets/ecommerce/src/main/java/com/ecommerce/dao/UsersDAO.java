@@ -14,5 +14,6 @@ public interface UsersDAO {
 	 public Response registerUser(User user);
 	 public Response loginUser(User user);
 	 public List<User> getUsers(); 
+	 public Response forgotPassword(User user);	 
 	 
 }

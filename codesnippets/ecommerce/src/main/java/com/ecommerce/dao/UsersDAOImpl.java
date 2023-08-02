@@ -108,10 +108,37 @@ public class UsersDAOImpl implements UsersDAO {
 	public List<User> getUsers() {
 		
 		  Session session =  sessionFactory.openSession();
-		  String hql = "Select from User users";
+		  String hql = "from User users";
 		  Query query = session.createQuery(hql);
 		  List result = ((org.hibernate.query.Query) query).list();		   
 		return result;
+	}
+
+	@Override
+	public Response forgotPassword(User user) {
+	   	  Response response = new Response();
+		  System.out.println(user.getEmail());
+		  Session session =  sessionFactory.openSession();
+		  Transaction tx = session.beginTransaction();
+		  
+		  String hql = "Select user.password from User user where user.email=:email";
+		  Query query = session.createQuery(hql);
+        query.setParameter("email", user.getEmail());
+        List result = ((org.hibernate.query.Query) query).list();
+        System.out.println("resultset:"+result);
+        if(result.isEmpty()) {
+       	 response.setMessage("User not found");
+            response.setOperation(true);
+            response.setStatusCode(404);
+        }
+        else{
+ 
+        	response.setMessage("Email Sent");
+            response.setOperation(true);
+            response.setStatusCode(200);
+        }
+		     
+		return response;
 	}
 
 }
