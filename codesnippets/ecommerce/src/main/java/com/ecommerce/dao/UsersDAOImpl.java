@@ -140,5 +140,30 @@ public class UsersDAOImpl implements UsersDAO {
 		     
 		return response;
 	}
-
+	@Override
+	public Response changePassword(User user) {
+		 Response response = new Response();
+		  System.out.println(user.getEmail());
+		  System.out.println(user.getPassword());
+		  Session session =  sessionFactory.openSession();
+		  Transaction tx = session.beginTransaction();
+		  String hql = "Update User user set user.password=:password where user.email=:email";
+		  Query query = session.createQuery(hql);
+       query.setParameter("email", user.getEmail());
+       query.setParameter("password", user.getPassword());
+       int count = query.executeUpdate();
+       tx.commit();
+       System.out.println("count" + count);
+       if(count > 0) {
+    	   response.setMessage("Password Changed Successfully!");
+           response.setOperation(true);
+           response.setStatusCode(200);
+       }
+       else {
+    	   response.setMessage("Failure in chaning password");
+           response.setOperation(false);
+           response.setStatusCode(200);
+       }
+		return response;
+	}
 }

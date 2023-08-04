@@ -33,4 +33,9 @@ public class UsersServiceImpl implements UsersService {
 		// TODO Auto-generated method stub
 		return usersDAO.forgotPassword(user);
 	}
+	@Override
+	public Response changePassword(User user) {
+		// TODO Auto-generated method stub
+		return usersDAO.changePassword(user);
+	}
 }

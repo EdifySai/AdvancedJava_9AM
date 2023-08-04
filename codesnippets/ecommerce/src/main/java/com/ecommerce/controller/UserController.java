@@ -19,10 +19,8 @@ import com.ecommerce.utils.Response;
 
 @RestController
 public class UserController {
-	
 	@Autowired
 	UsersService usersService;
-	
 	@RequestMapping("/health")
 	public String healthCheck() {
 		return "App is working fine";
@@ -60,7 +58,6 @@ public class UserController {
 		return new ResponseEntity(users, HttpStatus.OK);
 		
 	}
-	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostMapping("/forgotPassword")
 	public ResponseEntity forgotPassword(@RequestBody User user) {
@@ -79,4 +76,10 @@ public class UserController {
 		return new ResponseEntity(response,response.getOperation()? HttpStatus.OK : HttpStatus.BAD_REQUEST);	
 			
 	}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@PostMapping("/changePassword")
+	public ResponseEntity changePassword(@RequestBody User user) {
+		Response response = usersService.changePassword(user);
+		return new ResponseEntity(response,response.getOperation()? HttpStatus.OK : HttpStatus.BAD_REQUEST);
+	}		
 }

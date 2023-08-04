@@ -1,6 +1,6 @@
 Scope:
 
-1. User Management - Register (Completed), Login(Completed), List of Users(Completed), Forgot Password, Change Password
+1. User Management - Register (Completed), Login(Completed), List of Users(Completed), Forgot Password(completed), Change Password (Completed)
 
   Third Party Integration -  Email Service - SendGrid -Completed
 

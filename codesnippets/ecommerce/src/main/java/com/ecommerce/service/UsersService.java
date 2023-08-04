@@ -11,5 +11,6 @@ public interface UsersService {
 	public Response loginUser(User user);
 	 public List<User> getUsers(); 
 	 public Response forgotPassword(User user);	 
+	 public Response changePassword(User user);
 	
 }
