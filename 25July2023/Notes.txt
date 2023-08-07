@@ -4,11 +4,11 @@ Scope:
 
   Third Party Integration -  Email Service - SendGrid -Completed
 
-2. Product Management - Add product, update, remove, list all products 
+2. Product Management - Add product, update, remove, list all products   (Task)
 
-3. Seller Management - add seller, update, remove, list all sellers 
+3. Seller Management - add seller, update, remove, list all sellers  (Task)
 
-4. Cart Implementation - add products to the cart, remove them. 
+4. Cart Implementation - add products to the cart, remove them.  (Task)
 
 5. Payment Integration - Razor Pay. 
 
